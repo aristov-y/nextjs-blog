@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Head from 'next/head';
 import Layout from '../../components/layout.js';
 
-
 export default function FirstPost() {
   return (
       <Layout>

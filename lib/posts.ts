@@ -11,7 +11,7 @@ export function getAllPostIds() {
   return fileNames.map((fileName) => {
     return {
       params: {
-        id: fileName.replace(/\.md$/, ''),
+        id: fileName.replace(/\.md$/, '') as string,
       },
     };
   });
@@ -55,6 +55,7 @@ export function getSortedPostsData() {
     // Combine the data with the id
     return {
       id,
+      date: matterResult.data.date,
       ...matterResult.data,
     };
   });
